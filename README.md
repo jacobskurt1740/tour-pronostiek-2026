@@ -1,3 +1,8 @@
-# Tour Pronostiek Den Hoezenbroek
+# Tourpronostiek Den Hoezenbroek
 
-Versie met Tom zichtbaar verwerkt in index.html en data/tour-data.js.
+Update met Papa, Moe, Kurt, Tom en Jurgen.
+
+- 5 deelnemers
+- mobielvriendelijker klassement en wissels
+- Tom en Jurgen toegevoegd
+- starttekst: nog geen klassement
