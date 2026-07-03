@@ -1,3 +1,7 @@
-# Tourpronostiek Den Hoezenbroek
+# Tour Pronostiek Den Hoezenbroek
 
-Versie 3.1 - trui-voorspellingen verwijderd van de homepage en verplaatst naar ploegkaarten.
+Website voor de Tour Pronostiek 2026 van Den Hoezenbroek.
+
+## Laatste update
+- Papa, Moe, Kurt en Tom toegevoegd.
+- Tom: Pogačar als kopman.
