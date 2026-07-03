@@ -1,23 +1,10 @@
-# Tour Pronostiek 2026
+# De officiële Tourpronostiek van Den Hoezenbroek
 
-Familie Tourmanager met live klassement, ploegen, kopmannen, wissels en trui-voorspellingen.
+Website voor de Tour de France 2026-pronostiek.
 
-## Aanpassen
-Alle gegevens staan in:
+## Bijwerken
+- Deelnemers, ploegen, kopmannen en voorspellingen staan in `data/tour-data.json`.
+- Ritresultaten worden later toegevoegd in hetzelfde bestand onder `stages`.
 
-`data/tour-data.json`
-
-Daar voeg je deelnemers, ploegen en later ritresultaten toe.
-
-## Ritresultaat toevoegen
-Voeg in `stages` een object toe zoals:
-
-```json
-{
-  "number": 1,
-  "name": "Rit 1",
-  "results": ["Naam winnaar", "Naam tweede", "Naam derde"]
-}
-```
-
-Vul bij voorkeur de top 25 in. De site berekent automatisch punten voor renners die in de ploegen zitten.
+## Publiceren
+Commit en push via GitHub Desktop. GitHub Pages publiceert de site vanuit de root van de `main` branch.
