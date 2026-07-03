@@ -4,81 +4,91 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Tour Pronostiek 2026</title>
+  <meta name="description" content="Familie Tour de France pronostiek met live klassement, ploegen, kopmannen en ritpunten." />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="wrap nav-wrap">
-      <a class="brand" href="#home">🚴 <span>Tour Pronostiek 2026</span></a>
-      <nav>
+  <div class="bg-orb orb-a"></div>
+  <div class="bg-orb orb-b"></div>
+
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="Tour Pronostiek home">
+        <span class="brand-icon">🚴</span>
+        <span><strong>Tour Pronostiek</strong><small>Familie Tourmanager 2026</small></span>
+      </a>
+      <nav class="menu" aria-label="Navigatie">
         <a href="#klassement">Klassement</a>
         <a href="#ploegen">Ploegen</a>
+        <a href="#ritten">Ritten</a>
         <a href="#voorspellingen">Voorspellingen</a>
         <a href="#regels">Regels</a>
       </nav>
     </div>
   </header>
 
-  <main class="wrap" id="home">
-    <section class="hero card">
-      <div>
-        <p class="eyebrow">Familie Tourmanager</p>
+  <main class="container" id="home">
+    <section class="hero panel">
+      <div class="hero-copy">
+        <p class="tag">Live dashboard</p>
         <h1>Wie pakt de gele trui in onze familie?</h1>
-        <p class="lead">Live dashboard voor ploegen, kopmannen, wissels, ritpunten en trui-voorspellingen.</p>
-        <div class="hero-actions">
-          <a class="button" href="#klassement">Bekijk klassement</a>
-          <a class="button ghost" href="#ploegen">Bekijk ploegen</a>
+        <p class="lead">Volg het klassement, de ploegen, kopmannen, wissels, rituitslagen en trui-voorspellingen op één plaats.</p>
+        <div class="actions">
+          <a class="btn primary" href="#klassement">Bekijk klassement</a>
+          <a class="btn secondary" href="#ploegen">Bekijk ploegen</a>
         </div>
       </div>
-      <div class="leader-box">
-        <span class="label">Huidige leider</span>
-        <strong id="currentLeader">Nog geen punten</strong>
-        <span id="leaderPoints">Startklaar voor rit 1</span>
-      </div>
+      <aside class="yellow-card" aria-label="Leider">
+        <span class="mini-label">Huidige leider</span>
+        <strong id="leaderName">Nog geen punten</strong>
+        <span id="leaderMeta">Startklaar voor rit 1</span>
+      </aside>
     </section>
 
-    <section class="stats-grid" aria-label="Samenvatting">
-      <article class="stat card"><span>Deelnemers</span><strong id="statPlayers">0</strong></article>
-      <article class="stat card"><span>Ritten verwerkt</span><strong id="statStages">0</strong></article>
-      <article class="stat card"><span>Wissels per speler</span><strong>3</strong></article>
-      <article class="stat card"><span>Kopmanpunten</span><strong>x2</strong></article>
+    <section class="quickstats" aria-label="Samenvatting">
+      <article class="stat panel"><span>Deelnemers</span><strong id="statPlayers">0</strong></article>
+      <article class="stat panel"><span>Ritten verwerkt</span><strong id="statStages">0</strong></article>
+      <article class="stat panel"><span>Wissels per speler</span><strong>3</strong></article>
+      <article class="stat panel"><span>Kopman</span><strong>x2</strong></article>
     </section>
 
     <section class="section" id="klassement">
-      <div class="section-title">
-        <p class="eyebrow">Live stand</p>
-        <h2>Algemeen klassement</h2>
+      <div class="section-head">
+        <div><p class="tag">Live stand</p><h2>Algemeen klassement</h2></div>
+        <p class="hint">Gesorteerd op totaal aantal punten.</p>
       </div>
-      <div class="card table-card">
+      <div class="panel table-wrap">
         <table>
-          <thead><tr><th>#</th><th>Deelnemer</th><th>Punten</th><th>Kopman</th><th>Wissels over</th></tr></thead>
+          <thead><tr><th>#</th><th>Deelnemer</th><th>Punten</th><th>Vandaag</th><th>Kopman</th><th>Wissels</th></tr></thead>
           <tbody id="rankingBody"></tbody>
         </table>
       </div>
     </section>
 
-    <section class="section" id="laatste-rit">
-      <div class="section-title">
-        <p class="eyebrow">Laatste rit</p>
-        <h2>Ritoverzicht</h2>
+    <section class="section" id="podium">
+      <div class="section-head"><div><p class="tag">Top 3</p><h2>Podium</h2></div></div>
+      <div class="podium-grid" id="podiumGrid"></div>
+    </section>
+
+    <section class="section two-col" id="ritten">
+      <div>
+        <div class="section-head"><div><p class="tag">Laatste rit</p><h2>Ritoverzicht</h2></div></div>
+        <div class="panel latest" id="latestStage"></div>
       </div>
-      <div class="card last-stage" id="lastStageCard"></div>
+      <div>
+        <div class="section-head"><div><p class="tag">Dagklassement</p><h2>Laatste ritpunten</h2></div></div>
+        <div class="panel list-card" id="stageScores"></div>
+      </div>
     </section>
 
     <section class="section" id="ploegen">
-      <div class="section-title">
-        <p class="eyebrow">Alle teams</p>
-        <h2>Ploegen</h2>
-      </div>
+      <div class="section-head"><div><p class="tag">Alle teams</p><h2>Ploegen</h2></div></div>
       <div class="teams-grid" id="teamsGrid"></div>
     </section>
 
     <section class="section" id="voorspellingen">
-      <div class="section-title">
-        <p class="eyebrow">Voor de start</p>
-        <h2>Trui-voorspellingen</h2>
-      </div>
-      <div class="card table-card">
+      <div class="section-head"><div><p class="tag">Voor de start</p><h2>Trui-voorspellingen</h2></div></div>
+      <div class="panel table-wrap">
         <table>
           <thead><tr><th>Deelnemer</th><th>🟡 Geel</th><th>🟢 Groen</th><th>🔴⚪ Bolletjes</th><th>⚪ Wit</th></tr></thead>
           <tbody id="predictionBody"></tbody>
@@ -87,20 +97,17 @@
     </section>
 
     <section class="section" id="regels">
-      <div class="section-title">
-        <p class="eyebrow">Kort</p>
-        <h2>Regels</h2>
-      </div>
-      <div class="rules-grid">
-        <article class="card"><h3>Ploeg</h3><p>8 renners, maximaal 2 van hetzelfde wielerteam.</p></article>
-        <article class="card"><h3>Kopman</h3><p>Je kopman scoort dubbel. Kopman wijzigen kost 1 wissel.</p></article>
-        <article class="card"><h3>Wissels</h3><p>Elke deelnemer krijgt 3 wissels voor de hele Tour.</p></article>
-        <article class="card"><h3>Punten</h3><p>Elke rit scoren je renners als ze in de top 25 eindigen.</p></article>
+      <div class="section-head"><div><p class="tag">Kort</p><h2>Regels</h2></div></div>
+      <div class="rules">
+        <article class="panel"><h3>🚴 Ploeg</h3><p>8 renners. Maximum 2 renners van hetzelfde wielerteam.</p></article>
+        <article class="panel"><h3>⭐ Kopman</h3><p>De kopman scoort dubbel. Kopman wijzigen kost 1 wissel.</p></article>
+        <article class="panel"><h3>🔄 Wissels</h3><p>Elke deelnemer krijgt 3 wissels voor de volledige Tour.</p></article>
+        <article class="panel"><h3>🏁 Ritpunten</h3><p>Renners scoren punten als ze in de top 25 van een rit eindigen.</p></article>
       </div>
     </section>
   </main>
 
-  <footer class="wrap footer">Gebouwd voor de Familie Tourmanager 2026 💛</footer>
+  <footer class="footer container">Gebouwd voor de Familie Tourmanager 2026 💛</footer>
   <script src="assets/js/app.js"></script>
 </body>
 </html>
