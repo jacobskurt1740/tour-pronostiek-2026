@@ -4,110 +4,128 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>De officiële Tourpronostiek van Den Hoezenbroek</title>
-  <meta name="description" content="Tour de France 2026 pronostiek van Den Hoezenbroek met live klassement, ploegen, kopmannen en ritpunten." />
+  <meta name="description" content="Live dashboard voor de Tourpronostiek van Den Hoezenbroek." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
-  <div class="bg-orb orb-a"></div>
-  <div class="bg-orb orb-b"></div>
-
-  <header class="topbar">
-    <div class="container nav">
-      <a class="brand" href="#home" aria-label="Tourpronostiek home">
+  <header class="site-header">
+    <nav class="nav wrap">
+      <a class="brand" href="#top" aria-label="Naar boven">
         <span class="brand-icon">🚴</span>
-        <span><strong>Den Hoezenbroek</strong><small>Officiële Tourpronostiek</small></span>
+        <span>
+          <strong>Den Hoezenbroek</strong>
+          <small>Tourpronostiek 2026</small>
+        </span>
       </a>
-      <nav class="menu" aria-label="Navigatie">
+      <div class="nav-links">
         <a href="#klassement">Klassement</a>
         <a href="#ploegen">Ploegen</a>
-        <a href="#ritten">Ritten</a>
-        <a href="#voorspellingen">Voorspellingen</a>
+        <a href="#voorspellingen">Truien</a>
         <a href="#regels">Regels</a>
-      </nav>
-    </div>
+      </div>
+    </nav>
   </header>
 
-  <main class="container" id="home">
-    <section class="hero panel">
+  <main id="top">
+    <section class="hero wrap">
       <div class="hero-copy">
-        <p class="tag">Tour de France 2026</p>
+        <p class="eyebrow">Tour de France 2026</p>
         <h1>De officiële Tourpronostiek van Den Hoezenbroek</h1>
-        <p class="lead">Live klassement, ploegen, kopmannen, wissels, rituitslagen en trui-voorspellingen op één plek.</p>
-        <div class="actions">
+        <p class="lead">Live klassement voor ploegen, kopmannen, wissels, ritpunten en trui-voorspellingen.</p>
+        <div class="hero-actions">
           <a class="btn primary" href="#klassement">Bekijk klassement</a>
-          <a class="btn secondary" href="#ploegen">Bekijk ploegen</a>
+          <a class="btn ghost" href="#ploegen">Bekijk ploegen</a>
         </div>
       </div>
-      <aside class="yellow-card" aria-label="Leider">
-        <span class="mini-label">Huidige leider</span>
-        <strong id="leaderName">Nog geen punten</strong>
-        <span id="leaderMeta">Startklaar voor rit 1</span>
+      <aside class="leader-card" aria-label="Huidige leider">
+        <span class="badge">🏆 Huidige leider</span>
+        <h2 id="leaderName">Nog geen punten</h2>
+        <p id="leaderPoints">Startklaar voor rit 1</p>
+        <div class="mini-stats">
+          <div><strong id="participantCount">0</strong><span>Deelnemers</span></div>
+          <div><strong id="stageCount">0</strong><span>Ritten</span></div>
+          <div><strong>3</strong><span>Wissels</span></div>
+        </div>
       </aside>
     </section>
 
-    <section class="quickstats" aria-label="Samenvatting">
-      <article class="stat panel"><span>Deelnemers</span><strong id="statPlayers">0</strong></article>
-      <article class="stat panel"><span>Ritten verwerkt</span><strong id="statStages">0</strong></article>
-      <article class="stat panel"><span>Wissels per speler</span><strong>3</strong></article>
-      <article class="stat panel"><span>Kopman</span><strong>x2</strong></article>
-    </section>
+    <section class="wrap section stats-grid" id="dashboard"></section>
 
-    <section class="section" id="klassement">
-      <div class="section-head">
-        <div><p class="tag">Live stand</p><h2>Algemeen klassement</h2></div>
-        <p class="hint">Gesorteerd op totaal aantal punten.</p>
+    <section class="wrap section two-col">
+      <div class="panel" id="klassement">
+        <div class="section-title">
+          <span>📊</span>
+          <div>
+            <h2>Algemeen klassement</h2>
+            <p>Voor de start staat iedereen gelijk.</p>
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>#</th><th>Deelnemer</th><th>Punten</th><th>Kopman</th><th>Wissels</th></tr></thead>
+            <tbody id="standingsBody"></tbody>
+          </table>
+        </div>
       </div>
-      <div class="panel table-wrap">
-        <table>
-          <thead><tr><th>#</th><th>Deelnemer</th><th>Punten</th><th>Vandaag</th><th>Kopman</th><th>Wissels</th></tr></thead>
-          <tbody id="rankingBody"></tbody>
-        </table>
-      </div>
-    </section>
 
-    <section class="section" id="podium">
-      <div class="section-head"><div><p class="tag">Top 3</p><h2>Podium</h2></div></div>
-      <div class="podium-grid" id="podiumGrid"></div>
-    </section>
-
-    <section class="section two-col" id="ritten">
-      <div>
-        <div class="section-head"><div><p class="tag">Laatste rit</p><h2>Ritoverzicht</h2></div></div>
-        <div class="panel latest" id="latestStage"></div>
-      </div>
-      <div>
-        <div class="section-head"><div><p class="tag">Dagklassement</p><h2>Laatste ritpunten</h2></div></div>
-        <div class="panel list-card" id="stageScores"></div>
+      <div class="panel">
+        <div class="section-title">
+          <span>🚴</span>
+          <div>
+            <h2>Laatste rit</h2>
+            <p id="latestStageLabel">Binnenkort</p>
+          </div>
+        </div>
+        <div id="latestStage" class="empty-state">Nog geen ritresultaten. Na rit 1 verschijnen hier de dagwinnaar en opvallende verschuivingen.</div>
       </div>
     </section>
 
-    <section class="section" id="ploegen">
-      <div class="section-head"><div><p class="tag">Alle teams</p><h2>Ploegen</h2></div></div>
-      <div class="teams-grid" id="teamsGrid"></div>
-    </section>
-
-    <section class="section" id="voorspellingen">
-      <div class="section-head"><div><p class="tag">Voor de start</p><h2>Trui-voorspellingen</h2></div></div>
-      <div class="panel table-wrap">
-        <table>
-          <thead><tr><th>Deelnemer</th><th>🟡 Geel</th><th>🟢 Groen</th><th>🔴⚪ Bolletjes</th><th>⚪ Wit</th></tr></thead>
-          <tbody id="predictionBody"></tbody>
-        </table>
+    <section class="wrap section" id="ploegen">
+      <div class="section-title standalone">
+        <span>👥</span>
+        <div>
+          <h2>Ploegen</h2>
+          <p>8 renners per deelnemer, maximum 2 van hetzelfde wielerteam.</p>
+        </div>
       </div>
+      <div class="team-grid" id="teamGrid"></div>
     </section>
 
-    <section class="section" id="regels">
-      <div class="section-head"><div><p class="tag">Kort</p><h2>Regels</h2></div></div>
-      <div class="rules">
-        <article class="panel"><h3>🚴 Ploeg</h3><p>8 renners. Maximum 2 renners van hetzelfde wielerteam.</p></article>
-        <article class="panel"><h3>⭐ Kopman</h3><p>De kopman scoort dubbel. Kopman wijzigen kost 1 wissel.</p></article>
-        <article class="panel"><h3>🔄 Wissels</h3><p>Elke deelnemer krijgt 3 wissels voor de volledige Tour.</p></article>
-        <article class="panel"><h3>🏁 Ritpunten</h3><p>Renners scoren punten als ze in de top 25 van een rit eindigen.</p></article>
+    <section class="wrap section" id="voorspellingen">
+      <div class="section-title standalone">
+        <span>🎯</span>
+        <div>
+          <h2>Trui-voorspellingen</h2>
+          <p>Bonuspunten op het einde van de Tour.</p>
+        </div>
+      </div>
+      <div class="prediction-grid" id="predictionGrid"></div>
+    </section>
+
+    <section class="wrap section panel" id="regels">
+      <div class="section-title">
+        <span>📜</span>
+        <div>
+          <h2>Regels kort</h2>
+          <p>Bewust simpel gehouden voor weinig administratie.</p>
+        </div>
+      </div>
+      <div class="rules-grid">
+        <div><strong>8 renners</strong><span>per ploeg</span></div>
+        <div><strong>Max. 2</strong><span>per wielerteam</span></div>
+        <div><strong>1 kopman</strong><span>punten tellen dubbel</span></div>
+        <div><strong>3 wissels</strong><span>kopman wisselen kost 1 wissel</span></div>
+        <div><strong>Top 25</strong><span>scoort per rit</span></div>
+        <div><strong>Truien</strong><span>vooraf voorspellen</span></div>
       </div>
     </section>
   </main>
 
-  <footer class="footer container">Gebouwd voor Den Hoezenbroek 💛🚴</footer>
+  <footer class="footer wrap">Gemaakt voor Den Hoezenbroek • Tour de France 2026</footer>
+  <script src="data/tour-data.js"></script>
   <script src="assets/js/app.js"></script>
 </body>
 </html>
