@@ -22,6 +22,24 @@ window.TOUR_DATA = {
       points: 0,
       riders: ["Tadej Pogačar", "Jonas Vingegaard", "Mathieu van der Poel", "Remco Evenepoel", "Isaac Del Toro", "Florian Lipowitz", "Juan Ayuso", "Milan Fretin"],
       predictions: { geel: "Tadej Pogačar", groen: "Mads Pedersen", bolletjes: "Jonas Vingegaard", wit: "Juan Ayuso" }
+    },
+    {
+      name: "Kurt",
+      avatar: "👨",
+      captain: "Tadej Pogačar",
+      transfersLeft: 3,
+      points: 0,
+      riders: ["Tadej Pogačar", "Jonas Vingegaard", "Remco Evenepoel", "Paul Seixas", "Jasper Philipsen", "Tim Merlier", "Lennert Van Eetvelt", "Ben Healy"],
+      predictions: { geel: "Jonas Vingegaard", groen: "Jasper Philipsen", bolletjes: "Richard Carapaz", wit: "Paul Seixas" }
+    },
+    {
+      name: "Tom",
+      avatar: "👨‍💻",
+      captain: "Tadej Pogačar",
+      transfersLeft: 3,
+      points: 0,
+      riders: ["Tadej Pogačar", "Isaac Del Toro", "Remco Evenepoel", "Florian Lipowitz", "Paul Seixas", "Jasper Philipsen", "Mathieu van der Poel", "Jonas Vingegaard"],
+      predictions: { geel: "Tadej Pogačar", groen: "Jasper Philipsen", bolletjes: "Tadej Pogačar", wit: "Isaac Del Toro" }
     }
   ],
   stages: []
