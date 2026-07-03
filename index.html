@@ -1,122 +1,155 @@
 <!doctype html>
 <html lang="nl">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Tourpronostiek Den Hoezenbroek</title>
-  <meta name="description" content="De officiële Tourpronostiek van Den Hoezenbroek - live klassement, ploegen, wissels en rittenschema.">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23f5c400'/%3E%3Ccircle cx='22' cy='42' r='10' fill='none' stroke='%2308111f' stroke-width='5'/%3E%3Ccircle cx='44' cy='42' r='10' fill='none' stroke='%2308111f' stroke-width='5'/%3E%3Cpath d='M24 42l8-18 8 18M32 24h10M30 30h-8' fill='none' stroke='%2308111f' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ctext x='32' y='17' font-family='Arial,sans-serif' font-size='12' font-weight='900' fill='%2308111f' text-anchor='middle'%3EDH%3C/text%3E%3C/svg%3E">
+  <meta name="description" content="De officiële Tourpronostiek van Den Hoezenbroek - live klassement, ploegen, wissels en rittenschema." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23ffd400'/%3E%3Ccircle cx='20' cy='42' r='9' fill='none' stroke='%2307111f' stroke-width='4'/%3E%3Ccircle cx='46' cy='42' r='9' fill='none' stroke='%2307111f' stroke-width='4'/%3E%3Cpath d='M20 42l10-18h8l8 18M30 24l8 18M34 24h-8' fill='none' stroke='%2307111f' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='31' cy='14' r='5' fill='%2307111f'/%3E%3Ctext x='32' y='60' text-anchor='middle' font-family='Arial' font-weight='900' font-size='14' fill='%2307111f'%3EDH%3C/text%3E%3C/svg%3E" />
   <style>
     :root{
-      --bg:#07101d; --bg2:#0c1828; --card:#111d2e; --card2:#162438; --text:#f7f9fc; --muted:#9fb0c7;
-      --yellow:#f5c400; --green:#4ade80; --red:#fb7185; --orange:#fb923c; --border:rgba(255,255,255,.10);
-      --shadow:0 20px 60px rgba(0,0,0,.35); --radius:22px;
+      --bg:#050913;--panel:#101827;--panel2:#151f31;--line:rgba(255,255,255,.12);--text:#f7f9fc;--muted:#b7c4d9;--yellow:#ffd400;--yellow2:#ffb800;--green:#2fd36f;--orange:#ff9e2c;--red:#ff4655;--blue:#69a7ff;--shadow:0 18px 70px rgba(0,0,0,.45);--radius:22px;
     }
-    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:radial-gradient(circle at 20% 0%,rgba(245,196,0,.20),transparent 25%),linear-gradient(135deg,var(--bg),#050914 55%,#0a1425);color:var(--text)}
-    a{color:inherit;text-decoration:none}.wrap{width:min(1180px,calc(100% - 32px));margin:0 auto}.topbar{position:sticky;top:0;z-index:10;background:rgba(7,16,29,.82);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
-    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}.brand{display:flex;align-items:center;gap:12px;font-weight:900}.logo{width:42px;height:42px;border-radius:14px;background:var(--yellow);display:grid;place-items:center;color:#07101d;font-weight:1000;box-shadow:0 10px 25px rgba(245,196,0,.25)}
-    .links{display:flex;gap:8px;flex-wrap:wrap}.links a{font-weight:800;font-size:14px;color:#dce6f6;padding:10px 12px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid transparent}.links a:hover{border-color:rgba(245,196,0,.45);color:var(--yellow)}
-    .hero{padding:58px 0 34px}.heroGrid{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center}.eyebrow{display:inline-flex;gap:8px;align-items:center;color:#07101d;background:var(--yellow);font-weight:1000;border-radius:999px;padding:8px 12px;font-size:13px;letter-spacing:.08em;text-transform:uppercase}.title{margin:18px 0 16px;line-height:.88;letter-spacing:-.06em;font-weight:1000;font-size:clamp(46px,7vw,92px)}.title span{display:block}.title .accent{color:var(--yellow);font-size:.72em;letter-spacing:-.03em;margin-top:8px}.subtitle{max-width:680px;color:#c5d3e8;font-size:18px;line-height:1.55}.heroActions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;padding:13px 16px;font-weight:900;background:var(--yellow);color:#07101d}.btn.secondary{background:rgba(255,255,255,.08);color:var(--text);border:1px solid var(--border)}
-    .panel{background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.035));border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px}.leader{position:relative;overflow:hidden}.leader:before{content:"";position:absolute;inset:-50% -20% auto auto;width:260px;height:260px;background:radial-gradient(circle,rgba(245,196,0,.28),transparent 65%)}.panel h3,.section h2{margin:0 0 14px}.leaderName{font-size:44px;font-weight:1000;letter-spacing:-.04em}.points{color:var(--yellow);font-size:26px;font-weight:1000}.muted{color:var(--muted)}
-    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:18px 0 28px}.stat{background:rgba(255,255,255,.06);border:1px solid var(--border);border-radius:18px;padding:16px}.stat b{font-size:28px;display:block}.stat span{color:var(--muted);font-weight:800;font-size:13px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.section{padding:28px 0}.card{background:rgba(255,255,255,.055);border:1px solid var(--border);border-radius:20px;padding:18px}.table{width:100%;border-collapse:collapse}.table th{text-align:left;color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.08em}.table td,.table th{padding:13px 10px;border-bottom:1px solid var(--border)}.table tr:last-child td{border-bottom:0}.rank{font-weight:1000;color:var(--yellow)}.pill{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:6px 10px;background:rgba(255,255,255,.08);font-weight:900;font-size:13px}.teamCards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.rider{display:flex;justify-content:space-between;gap:8px;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.08)}.rider:last-child{border-bottom:0}.captain{color:var(--yellow);font-weight:1000}.preds{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:12px}.pred{background:rgba(255,255,255,.06);border-radius:14px;padding:10px}.pred small{display:block;color:var(--muted);font-weight:900}.switchDot{font-size:18px}.green{color:var(--green)}.orange{color:var(--orange)}.red{color:var(--red)}.schedule{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.stage{display:flex;gap:12px;align-items:flex-start;background:rgba(255,255,255,.055);border:1px solid var(--border);border-radius:16px;padding:14px}.stageNo{min-width:46px;height:46px;border-radius:14px;background:rgba(245,196,0,.14);color:var(--yellow);display:grid;place-items:center;font-weight:1000}.stageTitle{font-weight:1000}.stageMeta{color:var(--muted);font-size:14px;margin-top:4px}.type{margin-left:auto;font-size:20px}.footer{padding:38px 0;color:var(--muted);text-align:center}.lastUpdate{font-size:13px;color:#d7e2f3;margin-top:8px}.mobileOnly{display:none}
-    @media (max-width:860px){.wrap{width:min(100% - 22px,1180px)}.nav{align-items:flex-start}.links{justify-content:flex-end}.links a{font-size:12px;padding:8px 10px}.hero{padding:36px 0 20px}.heroGrid,.grid{grid-template-columns:1fr}.title{font-size:clamp(44px,15vw,76px)}.subtitle{font-size:16px}.stats{grid-template-columns:repeat(2,1fr)}.teamCards,.schedule{grid-template-columns:1fr}.preds{grid-template-columns:repeat(2,1fr)}.leaderName{font-size:36px}.table td,.table th{padding:11px 6px}.hideMobile{display:none}.mobileOnly{display:inline}.heroActions .btn{width:100%}}
-    @media (max-width:430px){.brandText{display:none}.stats{grid-template-columns:1fr}.title{letter-spacing:-.05em}.title .accent{font-size:.62em}.panel{padding:18px}.links{width:100%;display:grid;grid-template-columns:1fr 1fr;margin-top:8px}.nav{display:block}.logo{float:left;margin-right:10px}.brand{height:42px}.table{font-size:14px}}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:radial-gradient(circle at 20% 0%,rgba(255,212,0,.12),transparent 26%),linear-gradient(180deg,#060b16 0%,#07111f 48%,#050913 100%);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif} a{color:inherit;text-decoration:none}.wrap{width:min(1180px,calc(100% - 32px));margin:0 auto}.topbar{position:sticky;top:0;z-index:20;background:rgba(5,9,19,.82);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}.nav{height:74px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{display:flex;align-items:center;gap:13px;min-width:0}.logo{width:48px;height:48px;border-radius:14px;background:linear-gradient(135deg,var(--yellow),#fff28a);display:grid;place-items:center;box-shadow:0 12px 35px rgba(255,212,0,.22);font-size:25px;flex:0 0 auto}.brand-title{line-height:1.08;font-weight:950;letter-spacing:-.03em;font-size:18px}.brand-title span{color:var(--yellow)}.menu{display:flex;align-items:center;gap:6px}.menu a{font-weight:850;color:#d8e1f3;padding:12px 14px;border-radius:999px}.menu a:hover,.menu a.active{background:rgba(255,212,0,.12);color:var(--yellow)}
+    .hero{padding:54px 0 34px}.hero-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(320px,.85fr);gap:30px;align-items:center}.kicker{display:inline-flex;align-items:center;gap:9px;padding:10px 16px;background:linear-gradient(90deg,var(--yellow),var(--yellow2));color:#06101c;border-radius:999px;font-weight:950;letter-spacing:.12em;font-size:13px;text-transform:uppercase}.title{margin:28px 0 18px;line-height:.92;letter-spacing:-.075em;font-weight:1000;font-size:clamp(52px,7.6vw,105px)}.title .yellow{display:block;color:var(--yellow);font-size:.78em;letter-spacing:-.055em}.lead{max-width:760px;color:#d6e1f2;font-size:clamp(18px,2vw,23px);line-height:1.45;margin:0 0 28px}.actions{display:flex;gap:14px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;gap:10px;border-radius:999px;padding:15px 20px;font-weight:950;border:1px solid var(--line);background:rgba(255,255,255,.06)}.btn.primary{background:linear-gradient(90deg,var(--yellow),var(--yellow2));color:#07111f;border:0}.side-stack{display:grid;gap:18px}.card{background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.035));border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}.leader-card{padding:28px}.label{color:var(--muted);font-weight:850}.leader-card h2{font-size:44px;line-height:1;margin:18px 0 8px;letter-spacing:-.05em}.leader-card .score{font-size:26px;color:var(--yellow);font-weight:1000}.leader-card p{color:var(--muted);line-height:1.45}.stage-card{padding:26px}.stage-card h3{font-size:26px;margin:14px 0 5px}.stage-meta{display:flex;flex-wrap:wrap;gap:14px;color:var(--muted);margin-top:16px}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:12px auto 28px}.stat{padding:22px;border-radius:20px;background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.035));border:1px solid var(--line)}.stat .icon{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:rgba(255,212,0,.16);font-size:23px;margin-bottom:12px}.stat strong{font-size:28px;display:block}.stat span{color:var(--muted);font-weight:750}.grid{display:grid;grid-template-columns:1fr .8fr;gap:18px;margin:18px auto}.section{padding:24px}.section-head{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:18px}.section h2{font-size:22px;margin:0;letter-spacing:-.03em}.smallbtn{font-size:14px;font-weight:850;padding:9px 13px;border-radius:12px;border:1px solid var(--line);background:rgba(255,255,255,.05);color:#e7eefb}.table-wrap{overflow:auto}.table{width:100%;border-collapse:collapse;min-width:560px}.table th{font-size:12px;text-transform:uppercase;letter-spacing:.05em;text-align:left;color:var(--muted);padding:12px 12px;border-bottom:1px solid var(--line)}.table td{padding:13px 12px;border-bottom:1px solid rgba(255,255,255,.08);font-weight:800}.table tr.highlight td{color:var(--yellow)}.muted{color:var(--muted)}.badge{display:inline-flex;align-items:center;justify-content:center;min-width:34px;height:28px;padding:0 10px;border-radius:9px;background:rgba(47,211,111,.18);color:#fff;font-weight:1000}.badge.green{background:rgba(47,211,111,.75)}.badge.yellow{background:rgba(255,212,0,.78);color:#07111f}.badge.orange{background:rgba(255,158,44,.84)}.badge.red{background:rgba(255,70,85,.86)}.legend{display:flex;gap:18px;flex-wrap:wrap;align-items:center;margin-top:16px;color:var(--muted);font-weight:750}.dot{width:12px;height:12px;border-radius:50%;display:inline-block;margin-right:6px}.teams{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.team-card{padding:22px}.team-title{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px}.team-title h3{margin:0;font-size:24px}.captain{display:inline-flex;align-items:center;gap:7px;background:rgba(255,212,0,.14);color:var(--yellow);padding:8px 10px;border-radius:999px;font-size:13px;font-weight:950}.riders{display:grid;gap:8px;margin:0;padding:0;list-style:none}.riders li{display:flex;justify-content:space-between;gap:10px;padding:10px 11px;border-radius:13px;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.055);font-weight:750}.riders .cap{color:var(--yellow)}.predictions{margin-top:16px;border-top:1px solid var(--line);padding-top:14px;color:var(--muted);font-size:14px;display:grid;gap:6px}.schedule{display:grid;gap:10px}.stage-row{display:grid;grid-template-columns:52px 90px 1fr 88px 80px;gap:12px;align-items:center;padding:12px 14px;border:1px solid rgba(255,255,255,.08);border-radius:15px;background:rgba(255,255,255,.04)}.stage-row.current{background:linear-gradient(90deg,rgba(255,212,0,.22),rgba(255,212,0,.04));border-color:rgba(255,212,0,.35)}.stage-no{font-weight:1000;color:var(--yellow)}.type{justify-self:start;font-size:12px;font-weight:950;padding:6px 8px;border-radius:9px;background:rgba(255,255,255,.08);color:#dbe6f5;text-transform:uppercase}.footer{padding:36px 0 44px;text-align:center;color:var(--muted);font-weight:750}.mobile-hint{display:none;color:var(--muted);font-size:13px;margin-top:8px}
+    @media (max-width: 900px){.wrap{width:min(100% - 24px,720px)}.nav{height:auto;padding:12px 0;align-items:flex-start}.brand-title{font-size:16px}.menu{overflow-x:auto;white-space:nowrap;margin-right:-12px;padding-bottom:4px}.menu a{font-size:14px;padding:10px 11px}.hero{padding:34px 0 18px}.hero-grid{grid-template-columns:1fr}.side-stack{grid-template-columns:1fr}.title{font-size:clamp(46px,14vw,72px);letter-spacing:-.065em}.lead{font-size:18px}.stats{grid-template-columns:repeat(2,1fr)}.grid{grid-template-columns:1fr}.teams{grid-template-columns:1fr}.stage-row{grid-template-columns:44px 78px 1fr;gap:8px}.stage-row .distance,.stage-row .type{display:none}.mobile-hint{display:block}.leader-card h2{font-size:36px}.section{padding:18px}.table{min-width:0}.table th:nth-child(4),.table td:nth-child(4){display:none}}
+    @media (max-width: 520px){.topbar{position:relative}.logo{width:44px;height:44px}.brand-title{font-size:15px}.menu{width:100%;justify-content:flex-start}.nav{display:grid}.kicker{font-size:11px}.title{font-size:46px}.title .yellow{font-size:.7em}.actions .btn{width:100%;justify-content:center}.stats{grid-template-columns:1fr}.stat{display:flex;align-items:center;gap:14px}.stat .icon{margin:0}.leader-card,.stage-card{padding:21px}.stage-row{font-size:14px}.stage-row{grid-template-columns:36px 74px 1fr}.teams{gap:14px}.riders li{font-size:14px}}
   </style>
 </head>
 <body>
   <header class="topbar">
     <div class="wrap nav">
-      <a class="brand" href="#top"><span class="logo">DH</span><span class="brandText">Tourpronostiek</span></a>
-      <nav class="links" aria-label="Navigatie">
-        <a href="#klassement">Klassement</a><a href="#wissels">Wissels</a><a href="#ploegen">Ploegen</a><a href="#ritten">Rittenschema</a>
+      <a class="brand" href="#home" aria-label="Home">
+        <div class="logo">🚴</div>
+        <div class="brand-title">De officiële Tourpronostiek<br><span>DEN HOEZENBROEK</span></div>
+      </a>
+      <nav class="menu" aria-label="Navigatie">
+        <a class="active" href="#home">Home</a>
+        <a href="#klassement">Klassement</a>
+        <a href="#ploegen">Ploegen</a>
+        <a href="#ritten">Rittenschema</a>
+        <a href="#regels">Regels</a>
       </nav>
     </div>
   </header>
 
-  <main id="top">
+  <main id="home">
     <section class="hero">
-      <div class="wrap heroGrid">
+      <div class="wrap hero-grid">
         <div>
-          <div class="eyebrow">🟡 Tour de France 2026</div>
-          <h1 class="title"><span>De officiële</span><span>Tourpronostiek</span><span class="accent">DEN HOEZENBROEK</span></h1>
-          <p class="subtitle">Volg het live klassement, de ploegen, ritresultaten, wissels en Tourvoorspellingen van de familie Den Hoezenbroek.</p>
-          <div class="heroActions"><a class="btn" href="#klassement">Bekijk klassement</a><a class="btn secondary" href="#ploegen">Bekijk ploegen</a></div>
+          <div class="kicker">🟡 Tour de France 2026</div>
+          <h1 class="title">De officiële<br>Tourpronostiek<span class="yellow">DEN HOEZENBROEK</span></h1>
+          <p class="lead">Volg het live klassement, de ploegen, ritresultaten en wissels van de familie Den Hoezenbroek.</p>
+          <div class="actions">
+            <a class="btn primary" href="#klassement">🏆 Bekijk klassement</a>
+            <a class="btn" href="#ploegen">👥 Bekijk ploegen</a>
+          </div>
         </div>
-        <aside class="panel leader">
-          <h3>🏆 Huidige leider</h3>
-          <div class="leaderName" id="leaderName">Papa</div>
-          <div class="points" id="leaderPoints">0 punten</div>
-          <p class="muted">Iedereen start gelijk. Na rit 1 wordt dit klassement bijgewerkt.</p>
-          <div class="lastUpdate">Laatste update: 3 juli 2026</div>
-        </aside>
+        <div class="side-stack">
+          <article class="card leader-card">
+            <div class="label">🏆 Huidige leider</div>
+            <h2>Nog geen leider</h2>
+            <div class="score">0 punten</div>
+            <p>Iedereen start gelijk. Na rit 1 wordt het klassement bijgewerkt.</p>
+            <small class="muted">Laatste update: 3 juli 2026</small>
+          </article>
+          <article class="card stage-card">
+            <div class="label">🚴 Volgende rit</div>
+            <h3>Rit 1 - Barcelona › Barcelona</h3>
+            <div class="muted">Ploegentijdrit - 19,7 km</div>
+            <div class="stage-meta"><span>📅 4 juli 2026</span><span>⏱️ Ploegentijdrit</span></div>
+          </article>
+        </div>
       </div>
     </section>
 
-    <div class="wrap">
-      <section class="stats" aria-label="Dashboard cijfers">
-        <div class="stat"><b id="participantsCount">3</b><span>Deelnemers</span></div>
-        <div class="stat"><b>21</b><span>Ritten</span></div>
-        <div class="stat"><b>3</b><span>Wissels per deelnemer</span></div>
-        <div class="stat"><b>Rit 1</b><span>Volgende update</span></div>
-      </section>
+    <section class="wrap stats" aria-label="Samenvatting">
+      <article class="stat"><div class="icon">🏆</div><div><strong>Nog open</strong><span>Leider</span></div></article>
+      <article class="stat"><div class="icon">👥</div><div><strong id="statParticipants">3</strong><span>Deelnemers</span></div></article>
+      <article class="stat"><div class="icon">🔄</div><div><strong>3</strong><span>Wissels per deelnemer</span></div></article>
+      <article class="stat"><div class="icon">🚴</div><div><strong>Rit 1</strong><span>Volgende rit</span></div></article>
+    </section>
 
-      <section id="klassement" class="section">
-        <h2>📊 Klassement</h2>
-        <div class="card">
-          <table class="table" id="standingsTable"><thead><tr><th>#</th><th>Deelnemer</th><th>Punten</th><th class="hideMobile">Kopman</th><th>Wissels</th></tr></thead><tbody></tbody></table>
+    <section class="wrap grid" id="klassement">
+      <article class="card section">
+        <div class="section-head"><h2>🏆 Algemeen klassement</h2><span class="smallbtn">Voor de start</span></div>
+        <div class="table-wrap">
+          <table class="table" id="standingsTable">
+            <thead><tr><th>#</th><th>Deelnemer</th><th>Punten</th><th>Verschil</th></tr></thead>
+            <tbody></tbody>
+          </table>
         </div>
-      </section>
-
-      <section id="wissels" class="section grid">
-        <div>
-          <h2>🔄 Wissels per deelnemer</h2>
-          <div class="card">
-            <table class="table" id="switchesTable"><thead><tr><th>Deelnemer</th><th>Nog over</th><th>Status</th></tr></thead><tbody></tbody></table>
-          </div>
+        <p class="muted">Na elke rit worden de punten bijgewerkt.</p>
+      </article>
+      <article class="card section">
+        <div class="section-head"><h2>🔄 Wissels per deelnemer</h2><span class="smallbtn">Max. 3</span></div>
+        <div class="table-wrap">
+          <table class="table" id="transfersTable">
+            <thead><tr><th>Deelnemer</th><th>Wissels over</th></tr></thead>
+            <tbody></tbody>
+          </table>
         </div>
-        <div>
-          <h2>🎯 Trui-voorspellingen</h2>
-          <div class="card" id="predictionSummary"></div>
+        <div class="legend"><span><i class="dot" style="background:var(--green)"></i>3</span><span><i class="dot" style="background:var(--yellow)"></i>2</span><span><i class="dot" style="background:var(--orange)"></i>1</span><span><i class="dot" style="background:var(--red)"></i>0</span></div>
+      </article>
+    </section>
+
+    <section class="wrap" id="ploegen" style="margin-top:18px">
+      <article class="card section">
+        <div class="section-head"><h2>👥 Ploegen</h2><span class="smallbtn">8 renners per ploeg</span></div>
+        <div class="teams" id="teamsGrid"></div>
+      </article>
+    </section>
+
+    <section class="wrap grid" id="ritten">
+      <article class="card section">
+        <div class="section-head"><h2>📅 Rittenschema</h2><span class="smallbtn">21 ritten + 2 rustdagen</span></div>
+        <div class="schedule" id="scheduleList"></div>
+        <p class="mobile-hint">Tip: op smartphone tonen we het schema compacter.</p>
+      </article>
+      <article class="card section" id="regels">
+        <div class="section-head"><h2>📜 Regels kort</h2></div>
+        <div class="schedule">
+          <div class="stage-row"><strong>1</strong><span></span><span>Iedereen kiest 8 renners.</span></div>
+          <div class="stage-row"><strong>2</strong><span></span><span>Maximum 2 renners van hetzelfde wielerteam.</span></div>
+          <div class="stage-row"><strong>3</strong><span></span><span>Iedereen kiest 1 kopman. Punten van de kopman tellen dubbel.</span></div>
+          <div class="stage-row"><strong>4</strong><span></span><span>Iedereen krijgt 3 wissels tijdens de Tour.</span></div>
+          <div class="stage-row"><strong>5</strong><span></span><span>Ritpunten op basis van top 25. Eindklassement en trui-voorspellingen leveren bonuspunten op.</span></div>
         </div>
-      </section>
-
-      <section id="ploegen" class="section">
-        <h2>👥 Ploegen</h2>
-        <div class="teamCards" id="teams"></div>
-      </section>
-
-      <section id="ritten" class="section">
-        <h2>📅 Rittenschema</h2>
-        <div class="schedule" id="schedule"></div>
-      </section>
-    </div>
+      </article>
+    </section>
   </main>
 
-  <footer class="footer"><div class="wrap">🚴 De officiële Tourpronostiek van Den Hoezenbroek • gebouwd voor de familiegroep</div></footer>
+  <footer class="footer">🚴 De officiële Tourpronostiek van Den Hoezenbroek - Laatste update: 3 juli 2026</footer>
 
   <script>
     const participants = [
-      {name:'Papa', points:0, captain:'Tadej Pogačar', switches:3, riders:['Tadej Pogačar','Remco Evenepoel','Mathieu van der Poel','Paul Seixas','Juan Ayuso','Tim Merlier','Jasper Philipsen','Richard Carapaz'], predictions:{geel:'Tadej Pogačar', groen:'Jasper Philipsen', bollen:'Tadej Pogačar', wit:'Paul Seixas'}},
-      {name:'Moe', points:0, captain:'Tadej Pogačar', switches:3, riders:['Tadej Pogačar','Jonas Vingegaard','Mathieu van der Poel','Remco Evenepoel','Isaac Del Toro','Florian Lipowitz','Juan Ayuso','Milan Fretin'], predictions:{geel:'Tadej Pogačar', groen:'Mads Pedersen', bollen:'Jonas Vingegaard', wit:'Juan Ayuso'}},
-      {name:'Kurt', points:0, captain:'Tadej Pogačar', switches:3, riders:['Tadej Pogačar','Jonas Vingegaard','Remco Evenepoel','Paul Seixas','Jasper Philipsen','Tim Merlier','Lennert Van Eetvelt','Ben Healy'], predictions:{geel:'Jonas Vingegaard', groen:'Jasper Philipsen', bollen:'Richard Carapaz', wit:'Paul Seixas'}}
+      {name:'Papa', points:0, transfers:3, captain:'Tadej Pogačar', riders:['Tadej Pogačar','Remco Evenepoel','Mathieu van der Poel','Paul Seixas','Juan Ayuso','Tim Merlier','Jasper Philipsen','Richard Carapaz'], predictions:{geel:'Tadej Pogačar', groen:'Jasper Philipsen', wit:'Paul Seixas', bollen:'Tadej Pogačar'}},
+      {name:'Moe', points:0, transfers:3, captain:'Tadej Pogačar', riders:['Tadej Pogačar','Jonas Vingegaard','Mathieu van der Poel','Remco Evenepoel','Isaac del Toro','Florian Lipowitz','Juan Ayuso','Milan Fretin'], predictions:{geel:'Tadej Pogačar', groen:'Mads Pedersen', wit:'Juan Ayuso', bollen:'Jonas Vingegaard'}},
+      {name:'Kurt', points:0, transfers:3, captain:'Tadej Pogačar', riders:['Tadej Pogačar','Jonas Vingegaard','Remco Evenepoel','Paul Seixas','Jasper Philipsen','Tim Merlier','Lennert Van Eetvelt','Ben Healy'], predictions:{geel:'Jonas Vingegaard', groen:'Jasper Philipsen', wit:'Paul Seixas', bollen:'Richard Carapaz'}}
     ];
     const stages = [
-      ['1','Ploegentijdrit','Barcelona → Barcelona','TTT','⏱️'],['2','Heuvelrit','Tarragona → Barcelona','heuvel','🌄'],['3','Vlakke rit','Granollers → Les Angles','vlak','🟢'],['4','Bergrit','Carcassonne → Plateau de Beille','berg','⛰️'],['5','Vlakke rit','Toulouse → Toulouse','vlak','🟢'],['6','Heuvelrit','Albi → Rodez','heuvel','🌄'],['7','Vlakke rit','Aurillac → Le Lioran','vlak','🟢'],['8','Tijdrit','Bergerac → Bergerac','tijdrit','⏱️'],['9','Vlakke rit','Périgueux → Bergerac','vlak','🟢'],['Rust','Rustdag','Eerste rustdag','','☕'],['10','Bergrit','Pau → Hautacam','berg','⛰️'],['11','Bergrit','Luchon → Superbagnères','berg','⛰️'],['12','Heuvelrit','Auch → Cahors','heuvel','🌄'],['13','Vlakke rit','Agen → Bordeaux','vlak','🟢'],['14','Vlakke rit','La Rochelle → Nantes','vlak','🟢'],['Rust','Rustdag','Tweede rustdag','','☕'],['15','Heuvelrit','Nantes → Pontivy','heuvel','🌄'],['16','Vlakke rit','Vannes → Laval','vlak','🟢'],['17','Tijdrit','Mayenne → Laval','tijdrit','⏱️'],['18','Bergrit','Bourg-en-Bresse → Morzine','berg','⛰️'],['19','Bergrit','Albertville → La Plagne','berg','⛰️'],['20','Heuvelrit','Annecy → Lyon','heuvel','🌄'],['21','Slotrit','Mantes-la-Ville → Parijs Champs-Élysées','vlak','🏁']
+      ['1','Za 4 juli','Barcelona','Barcelona','TTT','19,7 km'],['2','Zo 5 juli','Tarragona','Barcelona','Heuvel','168,5 km'],['3','Ma 6 juli','Granollers','Les Angles','Berg','195,9 km'],['4','Di 7 juli','Carcassonne','Foix','Heuvel','181,9 km'],['5','Wo 8 juli','Lannemezan','Pau','Vlak','158,3 km'],['6','Do 9 juli','Pau','Gavarnie-Gèdre','Berg','186,2 km'],['7','Vr 10 juli','Hagetmau','Bordeaux','Vlak','175,1 km'],['8','Za 11 juli','Périgueux','Bergerac','Vlak','180,4 km'],['9','Zo 12 juli','Malemort','Ussel','Heuvel','185,5 km'],['R','Ma 13 juli','Rustdag','','Rust',''],['10','Di 14 juli','Aurillac','Le Lioran','Berg','166,6 km'],['11','Wo 15 juli','Vichy','Nevers','Vlak','161,3 km'],['12','Do 16 juli','Nevers','Chalon-sur-Saône','Vlak','179,1 km'],['13','Vr 17 juli','Dole','Belfort','Berg','205,8 km'],['14','Za 18 juli','Mulhouse','Le Markstein','Berg','155,3 km'],['15','Zo 19 juli','Champagnole','Plateau de Solaison','Berg','183,9 km'],['R','Ma 20 juli','Rustdag','','Rust',''],['16','Di 21 juli','Évian-les-Bains','Thonon-les-Bains','ITT','26,1 km'],['17','Wo 22 juli','Chambéry','Voiron','Vlak','174,7 km'],['18','Do 23 juli','Voiron','Orcières-Merlette','Berg','185,2 km'],['19','Vr 24 juli','Gap',"L'Alpe-d'Huez",'Berg','127,9 km'],['20','Za 25 juli',"Bourg-d'Oisans", "L'Alpe-d'Huez",'Berg','170,9 km'],['21','Zo 26 juli','Thoiry','Parijs','Vlak','133 km']
     ];
-    const sortParticipants = () => [...participants].sort((a,b)=>b.points-a.points || a.name.localeCompare(b.name));
-    function switchColor(n){return n===3?'green':n===2?'green':n===1?'orange':'red'}
-    function render(){
-      const sorted = sortParticipants();
-      document.getElementById('leaderName').textContent = sorted[0].name;
-      document.getElementById('leaderPoints').textContent = sorted[0].points + ' punten';
-      document.getElementById('participantsCount').textContent = participants.length;
-      document.querySelector('#standingsTable tbody').innerHTML = sorted.map((p,i)=>`<tr><td class="rank">${i===0?'🥇':i===1?'🥈':i===2?'🥉':i+1}</td><td><b>${p.name}</b></td><td><b>${p.points}</b></td><td class="hideMobile">⭐ ${p.captain}</td><td>${p.switches}/3</td></tr>`).join('');
-      document.querySelector('#switchesTable tbody').innerHTML = participants.map(p=>`<tr><td><b>${p.name}</b></td><td><b>${p.switches}</b> / 3</td><td><span class="switchDot ${switchColor(p.switches)}">●</span> ${p.switches===3?'alles beschikbaar':p.switches===0?'geen wissels meer':'nog ruimte'}</td></tr>`).join('');
-      document.getElementById('predictionSummary').innerHTML = participants.map(p=>`<div class="rider"><b>${p.name}</b><span>🟡 ${p.predictions.geel} · 🟢 ${p.predictions.groen} · 🔴 ${p.predictions.bollen} · ⚪ ${p.predictions.wit}</span></div>`).join('');
-      document.getElementById('teams').innerHTML = participants.map(p=>`<article class="card"><h3>${p.name}</h3><div class="pill">⭐ Kopman: ${p.captain}</div><div style="margin-top:14px">${p.riders.map(r=>`<div class="rider"><span class="${r===p.captain?'captain':''}">${r===p.captain?'⭐ ':''}${r}</span></div>`).join('')}</div><div class="preds"><div class="pred"><small>Geel</small>${p.predictions.geel}</div><div class="pred"><small>Groen</small>${p.predictions.groen}</div><div class="pred"><small>Bollen</small>${p.predictions.bollen}</div><div class="pred"><small>Wit</small>${p.predictions.wit}</div></div></article>`).join('');
-      document.getElementById('schedule').innerHTML = stages.map(s=>`<div class="stage"><div class="stageNo">${s[0]}</div><div><div class="stageTitle">${s[1]}</div><div class="stageMeta">${s[2]}</div><div class="stageMeta">${s[3]}</div></div><div class="type">${s[4]}</div></div>`).join('');
+    function badgeClass(n){ return n===3?'green':n===2?'yellow':n===1?'orange':'red'; }
+    function renderStandings(){
+      const body = document.querySelector('#standingsTable tbody'); body.innerHTML='';
+      const sorted = [...participants].sort((a,b)=>b.points-a.points || a.name.localeCompare(b.name));
+      sorted.forEach((p,i)=>{ const tr=document.createElement('tr'); if(i===0) tr.className='highlight'; tr.innerHTML=`<td>${i+1}</td><td>${i===0?'🥇 ':''}${p.name}</td><td>${p.points}</td><td>${p.points-sorted[0].points}</td>`; body.appendChild(tr); });
     }
-    render();
+    function renderTransfers(){
+      const body = document.querySelector('#transfersTable tbody'); body.innerHTML='';
+      participants.forEach(p=>{ const tr=document.createElement('tr'); tr.innerHTML=`<td>${p.name}</td><td><span class="badge ${badgeClass(p.transfers)}">${p.transfers}</span></td>`; body.appendChild(tr); });
+    }
+    function renderTeams(){
+      const grid=document.getElementById('teamsGrid'); grid.innerHTML='';
+      participants.forEach(p=>{ const card=document.createElement('article'); card.className='team-card card'; card.innerHTML=`<div class="team-title"><h3>${p.name}</h3><span class="captain">⭐ ${p.captain}</span></div><ul class="riders">${p.riders.map(r=>`<li class="${r===p.captain?'cap':''}"><span>${r}</span>${r===p.captain?'<b>K</b>':''}</li>`).join('')}</ul><div class="predictions"><b>Bonusvoorspellingen</b><span>🟡 ${p.predictions.geel}</span><span>🟢 ${p.predictions.groen}</span><span>⚪ ${p.predictions.wit}</span><span>🔴 ${p.predictions.bollen}</span></div>`; grid.appendChild(card); });
+    }
+    function renderSchedule(){
+      const list=document.getElementById('scheduleList'); list.innerHTML='';
+      stages.forEach((s,idx)=>{ const [no,date,from,to,type,dist]=s; const row=document.createElement('div'); row.className='stage-row '+(idx===0?'current':''); const route = type==='Rust' ? 'Rustdag' : `${from} › ${to}`; row.innerHTML=`<div class="stage-no">${no==='R'?'☕':no}</div><div class="muted">${date}</div><div><b>${route}</b></div><div class="distance muted">${dist}</div><div class="type">${type}</div>`; list.appendChild(row); });
+    }
+    document.getElementById('statParticipants').textContent = participants.length;
+    renderStandings(); renderTransfers(); renderTeams(); renderSchedule();
   </script>
 </body>
 </html>

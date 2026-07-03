@@ -1,9 +1,7 @@
-# De officiële Tourpronostiek van Den Hoezenbroek
+# Tourpronostiek Den Hoezenbroek
 
-Website voor de familie Tour de France pronostiek 2026.
+Versie 3.0 - single-file website voor GitHub Pages.
 
-## Aanpassen
-
-De gegevens staan in `data/tour-data.js`.
-
-Daarin pas je later deelnemers, ploegen, kopmannen, voorspellingen en ritresultaten aan.
+## Uploaden
+Vervang `index.html` en eventueel `README.md` in de lokale GitHub-map.
+Daarna in GitHub Desktop: Commit -> Push origin.
