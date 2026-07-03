@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tour Pronostiek 2026</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap nav-wrap">
+      <a class="brand" href="#home">🚴 <span>Tour Pronostiek 2026</span></a>
+      <nav>
+        <a href="#klassement">Klassement</a>
+        <a href="#ploegen">Ploegen</a>
+        <a href="#voorspellingen">Voorspellingen</a>
+        <a href="#regels">Regels</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap" id="home">
+    <section class="hero card">
+      <div>
+        <p class="eyebrow">Familie Tourmanager</p>
+        <h1>Wie pakt de gele trui in onze familie?</h1>
+        <p class="lead">Live dashboard voor ploegen, kopmannen, wissels, ritpunten en trui-voorspellingen.</p>
+        <div class="hero-actions">
+          <a class="button" href="#klassement">Bekijk klassement</a>
+          <a class="button ghost" href="#ploegen">Bekijk ploegen</a>
+        </div>
+      </div>
+      <div class="leader-box">
+        <span class="label">Huidige leider</span>
+        <strong id="currentLeader">Nog geen punten</strong>
+        <span id="leaderPoints">Startklaar voor rit 1</span>
+      </div>
+    </section>
+
+    <section class="stats-grid" aria-label="Samenvatting">
+      <article class="stat card"><span>Deelnemers</span><strong id="statPlayers">0</strong></article>
+      <article class="stat card"><span>Ritten verwerkt</span><strong id="statStages">0</strong></article>
+      <article class="stat card"><span>Wissels per speler</span><strong>3</strong></article>
+      <article class="stat card"><span>Kopmanpunten</span><strong>x2</strong></article>
+    </section>
+
+    <section class="section" id="klassement">
+      <div class="section-title">
+        <p class="eyebrow">Live stand</p>
+        <h2>Algemeen klassement</h2>
+      </div>
+      <div class="card table-card">
+        <table>
+          <thead><tr><th>#</th><th>Deelnemer</th><th>Punten</th><th>Kopman</th><th>Wissels over</th></tr></thead>
+          <tbody id="rankingBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section" id="laatste-rit">
+      <div class="section-title">
+        <p class="eyebrow">Laatste rit</p>
+        <h2>Ritoverzicht</h2>
+      </div>
+      <div class="card last-stage" id="lastStageCard"></div>
+    </section>
+
+    <section class="section" id="ploegen">
+      <div class="section-title">
+        <p class="eyebrow">Alle teams</p>
+        <h2>Ploegen</h2>
+      </div>
+      <div class="teams-grid" id="teamsGrid"></div>
+    </section>
+
+    <section class="section" id="voorspellingen">
+      <div class="section-title">
+        <p class="eyebrow">Voor de start</p>
+        <h2>Trui-voorspellingen</h2>
+      </div>
+      <div class="card table-card">
+        <table>
+          <thead><tr><th>Deelnemer</th><th>🟡 Geel</th><th>🟢 Groen</th><th>🔴⚪ Bolletjes</th><th>⚪ Wit</th></tr></thead>
+          <tbody id="predictionBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section" id="regels">
+      <div class="section-title">
+        <p class="eyebrow">Kort</p>
+        <h2>Regels</h2>
+      </div>
+      <div class="rules-grid">
+        <article class="card"><h3>Ploeg</h3><p>8 renners, maximaal 2 van hetzelfde wielerteam.</p></article>
+        <article class="card"><h3>Kopman</h3><p>Je kopman scoort dubbel. Kopman wijzigen kost 1 wissel.</p></article>
+        <article class="card"><h3>Wissels</h3><p>Elke deelnemer krijgt 3 wissels voor de hele Tour.</p></article>
+        <article class="card"><h3>Punten</h3><p>Elke rit scoren je renners als ze in de top 25 eindigen.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap footer">Gebouwd voor de Familie Tourmanager 2026 💛</footer>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

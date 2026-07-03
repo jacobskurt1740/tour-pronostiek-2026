@@ -1,0 +1,19 @@
+{
+  "players": [
+    {
+      "name": "Opa",
+      "captain": "Tadej Pogacar",
+      "transfersUsed": 0,
+      "riders": ["Tadej Pogacar", "Remco Evenepoel", "Mathieu van der Poel", "Paul Seixas", "Juan Ayuso", "Tim Merlier", "Jasper Philipsen", "Richard Carapaz"],
+      "predictions": {"yellow": "Tadej Pogacar", "green": "Jasper Philipsen", "polka": "Tadej Pogacar", "white": "Paul Seixas"}
+    },
+    {
+      "name": "Oma",
+      "captain": "Tadej Pogacar",
+      "transfersUsed": 0,
+      "riders": ["Tadej Pogacar", "Jonas Vingegaard", "Mathieu van der Poel", "Remco Evenepoel", "Isaac Del Toro", "Florian Lipowitz", "Juan Ayuso", "Milan Fretin"],
+      "predictions": {"yellow": "Tadej Pogacar", "green": "Mads Pedersen", "polka": "Jonas Vingegaard", "white": "Juan Ayuso"}
+    }
+  ],
+  "stages": []
+}
