@@ -1,9 +1,8 @@
-# Tour Pronostiek Den Hoezenbroek
+# Tourpronostiek Den Hoezenbroek - update na rit 5
 
-Update na rit 4.
-
-- Tom blijft leider met 388 punten
-- Jurgen wint de dag dankzij Mads Pedersen en stijgt naar 363 punten
-- Rit 4 verwerkt
-- Rit 5 als volgende rit
-- Truien: Torstein Traeen geel, Mads Pedersen groen, Alex Baudin bollen, Mathias Vacek wit
+Verwerkt:
+- Rit 5 verwerkt
+- Jurgen neemt de leiding met 414 punten
+- Papa's wissel blijft actief vanaf rit 2
+- Truien na rit 5: geel Torstein Traeen, groen Mads Pedersen, bolletjes Alex Baudin, wit Mathias Vacek
+- Rit 6 ingesteld als volgende rit
